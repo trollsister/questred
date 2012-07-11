@@ -1,0 +1,48 @@
+# NPC Roger L'effort de guerre, ressource brut (0).
+
+"Effort1":
+    texts:
+        description: "<Roger> Salut ptit gars !On aurait besoin de ta générosité
+            <br> parici ! Une grande expedition se prépare mais
+            <br>on a besoin de resources !
+            <br>&6Quete: <g>Effort de guerre, Part 1
+            <br>&6Objectif: Rapporte 64 stonebrick, 64 bois de chene et 64 bloc de verre."
+        acceptance: "<Roger> Super ptit gars j'attends ça avec impatience 
+            <br>On a pas grand chose a t'offrir en échange mais ça devrait faire l'affaire
+            <br> J'attends une cargaison plus intéressante par la suite. 
+            <delay=80>&6Quete: <g>Effort de guerre, Part 1 &6start!
+            <delay=40><g>Tu peux faire /quest status pour savoir ou tu en es."
+        completion: "<Robert> Ah vraiment sympa ptit gar tiens !
+            <br>L'expedition du Dr_MadMan
+            <br>&6Quete: Vous avez reçu une récompense.
+            <br><Roger> On a encore besoin de toi ! Ptit gar hésite pas !"
+    repeats: -1
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 98
+                amount: 64
+                npcdestination: 0
+                message: "&6Quete: Merci pour toute cette pierre !"
+        '1':
+            '0':
+                type: delivery
+                materialid: 17
+                amount: 64
+                npcdestination: 0
+        '2':
+            '0':
+                type: delivery
+                materialid: 20
+                amount: 64
+                npcdestination: 0
+    rewards:
+        '0':
+            type: command
+            command: give <player> 384 10
+            server: false
+        '1':
+            type: command
+            command: give <player> 351:3 1
+            server: false
