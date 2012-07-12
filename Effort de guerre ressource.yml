@@ -12,7 +12,7 @@
         - ENGAGE
         - CHAT Salut <PLAYER>! Pourrais tu nous aider ? 
         - CHAT Nous montons une expedition et nous avons besoin de ressources
-        - CHAT Serais tu pret à nous aider ?
+        - CHAT Serais tu pret ï¿½ nous aider ?
         - CHAT Si c'est le cas dis "Oui"
         - DISENGAGE
       Chat Trigger:
@@ -37,13 +37,13 @@
       Click Trigger:
         Script:
         - ENGAGE
-        - CHAT Ah tu as les resources donnent les moi !
+        - CHAT Ah tu as les resources donne les moi !
         - TAKE STONE 64
         - TAKE GLASS 64
-        - NARRATE Vous avez fournis toutes les ressources necessaires.
+        - NARRATE Vous avez fourni toutes les ressources necessaires.
         - CHAT Merci Bien ptit gars ! Tiens c'est pour toi
-        - CHAT Je sais c'est pas grand chose, mais j'atttends une livraison interessante dans pas longtemps. 
-        - CHAT La prochaine fois je te filerais un truc super !
+        - CHAT Je sais c'est pas grand chose, mais j'attends une livraison interessante dans pas longtemps. 
+        - CHAT La prochaine fois je te filerai un truc super !
         - GIVE 384 15
         - FINISH
         - DISENGAGE
