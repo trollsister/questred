@@ -1,0 +1,55 @@
+'Roger1':
+  Type: Trigger   
+  Requirements:
+    Mode: ALL
+    List:
+    - -FINISHED Roger1
+    - -FINISHED Roger2
+  Steps:
+    1:
+      Click Trigger:
+        Script:
+        - ENGAGE
+        - CHAT Salut <PLAYER>! Pourrais tu nous aider ? 
+        - CHAT Nous montons une expédition et nous avons besoin de ressources
+        - CHAT Serais tu prêt à nous aider ?
+        - CHAT Si c'est le cas dis "Oui"
+        - DISENGAGE
+        - ZAP
+    2:
+      Chat Trigger:
+        1:
+         Trigger: /Oui/
+         Script:
+         - ENGAGE
+         - CHAT Il nous faudrait 64 Stonebrick ainsi que 64 bois bruts de chêne et enfin 64 bloc de verre.
+         - DISENGAGE
+         - ZAP 3
+    3:
+      Click Trigger:
+        Script:
+        - ENGAGE
+        - CHAT As tu les 64 stonebricks, 64 bois bruts de chêne ainsi que les 64 blocs de verre ?
+        - TAKE STONE 64
+        - TAKE GLASS 64
+        - FINISH
+        - DISENGAGE
+'Roger2':
+  Type: Trigger   
+  Requirements:
+    Mode: All
+    List:
+    - FINISHED Roger1
+    - -FINISHED Roger2
+  Steps:
+    1:
+      Click Trigger:
+        Script:
+        - ENGAGE
+        - NARRATE Vous avez fournis toutes les ressources necessaires.
+        - CHAT Merci Bien ptit gars ! Tiens c'est pour toi
+        - CHAT Je sais c'est pas grand chose, mais j'atttends une livraison interessante dans pas longtemps. 
+        - CHAT prochaine fois je te filerais un truc super !
+        - GIVE SAND 2
+        - FINISH
+        - DISENGAGE
