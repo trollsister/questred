@@ -22,7 +22,7 @@
          - ENGAGE
          - CHAT Il nous faudrait 64 Stonebrick ainsi que 64 bois bruts de chêne et enfin 64 bloc de verre.
          - DISENGAGE
-         - ZAP 1
+         - ZAP 2
     2:
       Click Trigger:
         Script:
