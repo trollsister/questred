@@ -34,7 +34,7 @@
         '0':
             type: command
             command: give <player> 384 15
-#  Indiana jones temple(0).
+#  IndianaJones temple (1).
 
 "Temple1":
     texts:
@@ -69,6 +69,43 @@
             type: item
             id: 322
             amount: 1
-        '1'
+        '1':
            type: money
-           amount: 200
+           money: 200
+#  jesusjoe demo(2).
+
+"demo1":
+    texts:
+        description: "<Jesus> Bienvenue à toi mon enfant
+            <br>Si tu es ici c'est que j'ai besoin de toi. Le monde des enfers acquiert trop de pouvoir.
+            <br>Il faut leur faire comprendre que ça ne peut pas continuer.
+            <br>&6Quest: <g>Guerre Sainte, Part 1
+            <br>&6Objectif: Allez dans le nether et détruisez 500 bloc de Netherrack."
+        acceptance: "<Jesus> Allez par a présent ta croisade commence.
+            <br>Nous communiquerons par le pouvoir du saint esprit (et de telephone).
+            <delay=80>&6Quest: <g>Guerre Sainte, Part 1 &6start!
+            <delay=40><g>Faites /quests status pour savoir ou vous en etes dans votre quete"
+        completion: "<Jesus> Les forces du mal sont repoussés
+            <br>Et c'est grâce à toi. Euh ... tiens tu as bien mérité .. cela !
+            <br>&6Quest: Vous recevez un casque en cuir, une pomme et 2 geeks ...
+            <br><Jesus> Le mal est partout reviens me voir ta croisade ne fait que commencer !"
+    repeats: 0
+    objectives:
+        '0':
+            '0':
+                type: destroy block
+                amount: 200
+                materialid: 87
+                message: "<Jesus> Ah le mal est repoussé revenez auprès de moi"
+    rewards:
+        '0':
+            type: item
+            id: 260
+            amount: 1
+        '1':
+           type: money
+           amount: 2
+        '2':
+            type: item
+            id: 298
+            amount: 1
