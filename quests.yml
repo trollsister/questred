@@ -1,11 +1,11 @@
-#  (0).
+#  Roger effort de guerre  minage1(0).
 
 "Effort de guerre":
     texts:
         description: "<Roger> Salut ptit gars on est en train de monter
             <br>une expédition en partance pour une terre lointaine et nous avons besoin de vous !
             <br>&6Quest: <g>Effort de guerre, Part 1
-            <br>&6Objective: Rapporter les ressources qui vous sont demandées."
+            <br>&6Objectif: Rapporter les ressources qui vous sont demandées."
         acceptance: "<Roger> Ah la tu me fais plaisir ptit gars 
             <br>Alors il me faudrait 64 Stone et 64 bloc de verre.
             <delay=80>&6Quest: <g>Effort de guerre, Part 1 &6start!
@@ -15,6 +15,7 @@
             <br>&6Quest: Vous avez reçu 15 bouteilles d'xp ! Alors heureuse ?
             <br><Roger> J'aurais encore besoin de matériel revenez me voir dans 10 minutes le temps que je range tout ça!"
     repeats: -1
+    delay: 
     objectives:
         '0':
             '0':
@@ -33,3 +34,41 @@
         '0':
             type: command
             command: give <player> 384 15
+#  Indiana jones temple(0).
+
+"Temple1":
+    texts:
+        description: "<Dr Jones> Bonjour jeune homme j'aurais besoin de toi
+            <br>J'ai eu vent d'une rumeur. Un ancien temple se trouverait a un endroit précis.
+            <br> Pourrais tu aller vérifier l'info pour moi ? Je suis coincé ici !
+            <br>&6Quest: <g>Le Temple, Part 1
+            <br>&6Objectif: Rendez-vous au coordonée x-149 y65 z-865 et descendez au fond du temple."
+        acceptance: "<Dr Jones> Merci à toi mon ami. 
+            <br>Tiens voici une radio pour que nous puissions communiquer ! 
+            <delay=80>&6Quest: <g>Le Temple, Part 1 &6start!
+            <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
+        completion: "<Dr Jones> Et bien merci a toi mon ami 
+            <br>Tiens j'ai trouvé ça lors d'une de mes dernieres expeditions je te le confie !
+            <br>&6Quest: Vous recevez une relique du Dr Jones ainsi que 200 geeks !
+            <br><Dr Jones> Le temps de preparer l'expedition et nous partirons dans peu de temps !"
+    repeats: 0
+    objectives:
+        '0':
+            '0':
+                type: move location
+                location: 
+                    x: -121
+                    y: 46
+                    z: -866
+                    world: 'world'
+                time: 2
+                leeway: 4
+                message: "<Dr Jones> Allo vous l'avez trouvé ? Bien revenez à présent il reste beaucoup à faire !"
+    rewards:
+        '0':
+            type: item
+            id: 322
+            amount: 1
+        '1'
+           type: money
+           amount: 200
