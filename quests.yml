@@ -1,21 +1,19 @@
 #  Roger effort de guerre  minage1(0).
-
 "Effort de guerre":
     texts:
         description: "<Roger> Salut ptit gars on est en train de monter
-            <br>une expédition en partance pour une terre lointaine et nous avons besoin de vous !
+            <br>une expedition en partance pour une terre lointaine et nous avons besoin de vous !
             <br>&6Quest: <g>Effort de guerre, Part 1
-            <br>&6Objectif: Rapporter les ressources qui vous sont demandées."
-        acceptance: "<Roger> Ah la tu me fais plaisir ptit gars 
+            <br>&6Objectif: Rapporter les ressources qui vous sont demandees."
+        acceptance: "<Roger> Ah la tu me fais plaisir ptit gars
             <br>Alors il me faudrait 64 Stone et 64 bloc de verre.
             <delay=80>&6Quest: <g>Effort de guerre, Part 1 &6start!
             <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
-        completion: "<Roger> Ah merci ptit gars !
-            <br>Je suis désolé j'ai pas grand chose a te donner mais j'attends un chargement intéressant ! La prochaine fois ça va détonner !
-            <br>&6Quest: Vous avez reçu 15 bouteilles d'xp ! Alors heureuse ?
-            <br><Roger> J'aurais encore besoin de matériel revenez me voir dans 5 minutes le temps que je range tout ça!"
+        completion: "<Roger> Merci ptit gars
+             <br> Je peux te donner que cela desole mais bientot j'aurais bien mieux !
+             <br> &Quest: Vous recevez 15 bouteilles d'exp"
     repeats: -1
-    delay: 5 
+    delay: 5
     objectives:
         '0':
             '0':
@@ -23,47 +21,45 @@
                 materialid: 1
                 amount: 64
                 npcdestination: 0
-                message: "&6Quest: Vous avez donné à Roger  64 stone."
+                message: "&6Quest: Vous avez donne a Roger  64 stone."
             '1':
                 type: delivery
                 materialid: 20
                 amount: 64
                 npcdestination: 0
-                message: "&6Quest: Vous avez donné à Roger 64 Glass"
+                message: "&6Quest: Vous avez donne a Roger 64 Glass"
     rewards:
         '0':
             type: command
             command: give <player> 384 15
-#  IndianaJones temple (1).
-
+#  IndianaJones temple (1)
 "Temple1":
     texts:
         description: "<Dr Jones> Bonjour jeune homme j'aurais besoin de toi
-            <br>J'ai eu vent d'une rumeur. Un ancien temple se trouverait a un endroit précis.
-            <br> Pourrais tu aller vérifier l'info pour moi ? Je suis coincé ici !
+            <br>J'ai eu vent d'une rumeur. Un ancien temple se trouverait a un endroit precis
+            <br> Pourrais tu aller verifier l'info pour moi  Je suis coince ici !
             <br>&6Quest: <g>Le Temple, Part 1
-            <br>&6Objectif: Rendez-vous au coordonée x-149 y65 z-865 et descendez au fond du temple."
-        acceptance: "<Dr Jones> Merci à toi mon ami. 
+            <br>&6Objective: Rendez-vous au coordonee x-149 y65 z-865 et descendez au fond du temple."
+        acceptance: "<Dr Jones> Merci a toi mon ami
             <br>Tiens voici une radio pour que nous puissions communiquer ! 
             <delay=80>&6Quest: <g>Le Temple, Part 1 &6start!
             <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
-        completion: "<Dr Jones> Et bien merci a toi mon ami 
-            <br>Tiens j'ai trouvé ça lors d'une de mes dernieres expeditions je te le confie !
-            <br>&6Quest: Vous recevez une relique du Dr Jones ainsi que 200 geeks !
-            <br><Dr Jones> Le temps de preparer l'expedition et nous partirons dans peu de temps !"
+        completion: "<Dr Jones> Merci a toi
+             <br> tiens je te confie cette relique
+             <br> &Quest: Vous recevez une relique et des geeks"
     repeats: 0
     objectives:
         '0':
             '0':
                 type: move location
-                location: 
+                location:
                     x: -121
                     y: 46
                     z: -866
                     world: 'world'
                 time: 2
                 leeway: 4
-                message: "<Dr Jones> Allo vous l'avez trouvé ? Bien revenez à présent il reste beaucoup à faire !"
+                message: "<Dr Jones> Allo vous l'avez trouve. Bien revenez a present il reste beaucoup a faire !"
     rewards:
         '0':
             type: item
@@ -72,23 +68,20 @@
         '1':
            type: money
            money: 200
-#  jesusjoe demo(2).
-
+# jesusjoe demo1 (2)
 "demo1":
     texts:
-        description: "<Jesus> Bienvenue à toi mon enfant
-            <br>Si tu es ici c'est que j'ai besoin de toi. Le monde des enfers acquiert trop de pouvoir.
-            <br>Il faut leur faire comprendre que ça ne peut pas continuer.
-            <br>&6Quest: <g>Guerre Sainte, Part 1
-            <br>&6Objectif: Allez dans le nether et détruisez 500 bloc de Netherrack."
-        acceptance: "<Jesus> Allez par a présent ta croisade commence.
-            <br>Nous communiquerons par le pouvoir du saint esprit (et de telephone).
-            <delay=80>&6Quest: <g>Guerre Sainte, Part 1 &6start!
-            <delay=40><g>Faites /quests status pour savoir ou vous en etes dans votre quete"
-        completion: "<Jesus> Les forces du mal sont repoussés
-            <br>Et c'est grâce à toi. Euh ... tiens tu as bien mérité .. cela !
-            <br>&6Quest: Vous recevez un casque en cuir, une pomme et 2 geeks ...
-            <br><Jesus> Le mal est partout reviens me voir ta croisade ne fait que commencer !"
+        description: "<Jesus> Bienvenue a toi mon enfant
+            <br>Si tu es ici c'est que j'ai besoin de toi. Il faut repousser les enfers
+            <br>Nous devons les repousser !
+            <br>&6Quest: <g>Guerre sainte, Part 1
+            <br>&6Objective: Detruisez 200 bloc de netherrack"
+        acceptance: "<Jesus> Allez par a present ta croisade commence.
+            <delay=80>&6Quest: <g>Guerre sainte, Part1
+            <delay=40> <g>Faites /quests status pour savoir ou vous en etes dans votre quete"
+        completion: "Le mal est repoussee
+            <br> et c'est grace  a vous! Tenez voici... ce j'ai sur moi
+            <br>&6Quest: vous recevez un casque en cuir une pomme et un peu d'argent"
     repeats: 0
     objectives:
         '0':
@@ -96,7 +89,7 @@
                 type: destroy block
                 amount: 200
                 materialid: 87
-                message: "<Jesus> Ah le mal est repoussé revenez auprès de moi"
+                message: "<Jesus> Ah le mal est repousse revenez aupres de moi"
     rewards:
         '0':
             type: item
@@ -109,23 +102,21 @@
             type: item
             id: 298
             amount: 1
-#  Antiqua tresor(3).
-
+#  Antiqua tresor(3)
 "antiq1":
     texts:
-        description: "<Julia> Bonjour bienvenue chez l'antiquaire préféré de Band Of Geek.
-            <br>Je suis en train de préparer les stocks du magasin
-            <br>D'ailleurs je suis prêt à racheter quelques pieces que je recherche.
-            <br>&6Quest: <g>Avidité quand tu nous tiens, Part 1
-            <br>&6Objectif: Rapporter 30 sac d'encres à Julia."
-        acceptance: "<Julia> Merci de me trouver cet encre vous serez bien récompenser.
+        description: "<Julia> bonjour bienvenue chez le nouvel antiquaire
+            <br>Il me faut des stocks
+            <br> Pourriez vous me ramener deux trois petites choses
+            <br>&6Quest: <g> Avidite complaisante, Part 1
+            <br>&6Objective: Rapporter 30 sacs d'encres a julia."
+        acceptance: "<Julia> Merci de me trouver cet encre vous serez bien recompenser.
             <br>Je vous appellerais au moment voulu.
-            <delay=80>&6Quest: <g>Avidité quand tu nous tiens, Part 1 &6start!
+            <delay=80>&6Quest: <g>Avidite quand tu nous tiens, Part 1 &6start!
             <delay=40><g>Faites /quests status pour savoir ou vous en etes dans votre quete"
-        completion: "<Julia> Ah merci c'est presque ça que je voulais
-            <br>Hum elle n'est pas de premiere qualité cet encre. Je te les échange contre ce lot d'aventurier.
-            <br>&6Quest: Vous recevez une boussole, une carte et un cookie.
-            <br><Julia> J'ai encore deux trois choses à trouver, reviens me voir."
+        completion: "<Julia>Merci c'est cela qu'il me fallait
+            <br>Hum elle est pas super cet encre... Tiens voila un set d'aventurier
+            <&6Quest: Vous recevez une boussole, une carte et un cookie."
     repeats: 0
     objectives:
         '0':
@@ -134,7 +125,7 @@
                 materialid: 351
                 amount: 30
                 npcdestination: 3
-                message: "&6Quest: Vous avez donné à Julia 30 sac d'encre."
+                message: "&6Quest: Vous avez donne a Julia 30 sac d'encre."
     rewards:
         '0':
             type: item
