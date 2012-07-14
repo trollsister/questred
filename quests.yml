@@ -109,3 +109,42 @@
             type: item
             id: 298
             amount: 1
+#  Antiqua tresor(3).
+
+"antiq1":
+    texts:
+        description: "<Julia> Bonjour bienvenue chez l'antiquaire préféré de Band Of Geek.
+            <br>Je suis en train de préparer les stocks du magasin
+            <br>D'ailleurs je suis prêt à racheter quelques pieces que je recherche.
+            <br>&6Quest: <g>Avidité quand tu nous tiens, Part 1
+            <br>&6Objectif: Rapporter 30 sac d'encres à Julia."
+        acceptance: "<Julia> Merci de me trouver cet encre vous serez bien récompenser.
+            <br>Je vous appellerais au moment voulu.
+            <delay=80>&6Quest: <g>Avidité quand tu nous tiens, Part 1 &6start!
+            <delay=40><g>Faites /quests status pour savoir ou vous en etes dans votre quete"
+        completion: "<Julia> Ah merci c'est presque ça que je voulais
+            <br>Hum elle n'est pas de premiere qualité cet encre. Je te les échange contre ce lot d'aventurier.
+            <br>&6Quest: Vous recevez une boussole, une carte et un cookie.
+            <br><Julia> J'ai encore deux trois choses à trouver, reviens me voir."
+    repeats: 0
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 351
+                amount: 30
+                npcdestination: 3
+                message: "&6Quest: Vous avez donné à Julia 30 sac d'encre."
+    rewards:
+        '0':
+            type: item
+            id: 347
+            amount: 1
+        '1':
+           type: item
+           id: 358
+           amount: 1
+        '2':
+            type: item
+            id: 357
+            amount: 1
