@@ -1,0 +1,35 @@
+#  (0).
+
+"Effort de guerre":
+    texts:
+        description: "<Roger> Salut ptit gars on est en train de monter
+            <br>une expédition en partance pour une terre lointaine et nous avons besoin de vous !
+            <br>&6Quest: <g>Effort de guerre, Part 1
+            <br>&6Objective: Rapporter les ressources qui vous sont demandées."
+        acceptance: "<Roger> Ah la tu me fais plaisir ptit gars 
+            <br>Alors il me faudrait 64 Stone et 64 bloc de verre.
+            <delay=80>&6Quest: <g>Effort de guerre, Part 1 &6start!
+            <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
+        completion: "<Roger> Ah merci ptit gars !
+            <br>Je suis désolé j'ai pas grand chose a te donner mais j'attends un chargement intéressant ! La prochaine fois ça va détonner !
+            <br>&6Quest: Vous avez reçu 15 bouteilles d'xp ! Alors heureuse ?
+            <br><Roger> J'aurais encore besoin de matériel revenez me voir dans 10 minutes le temps que je range tout ça!"
+    repeats: -1
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 1
+                amount: 64
+                npcdestination: 0
+                message: "&6Quest: Vous avez donné à Roger  64 stone."
+            '1':
+                type: delivery
+                materialid: 20
+                amount: 64
+                npcdestination: 0
+                message: "&6Quest: Vous avez donné à Roger 64 Glass"
+    rewards:
+        '0':
+            type: command
+            command: give <player> 384 15
