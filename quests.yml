@@ -13,9 +13,9 @@
         completion: "<Roger> Ah merci ptit gars !
             <br>Je suis désolé j'ai pas grand chose a te donner mais j'attends un chargement intéressant ! La prochaine fois ça va détonner !
             <br>&6Quest: Vous avez reçu 15 bouteilles d'xp ! Alors heureuse ?
-            <br><Roger> J'aurais encore besoin de matériel revenez me voir dans 10 minutes le temps que je range tout ça!"
+            <br><Roger> J'aurais encore besoin de matériel revenez me voir dans 5 minutes le temps que je range tout ça!"
     repeats: -1
-    delay: 
+    delay: 5 
     objectives:
         '0':
             '0':
