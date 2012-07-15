@@ -1,5 +1,5 @@
 #  Roger effort de guerre  minage1(0).
-"Effort de guerre":
+"Effortressource":
     texts:
         description: "<Roger> Salut ptit gars on est en train de monter
             <br>une expedition en partance pour une terre lointaine et nous avons besoin de vous !
@@ -9,9 +9,9 @@
             <br>Alors il me faudrait 64 Stone et 64 bloc de verre.
             <delay=80>&6Quest: <g>Effort de guerre, Part 1 &6start!
             <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
-        completion: "<Roger> Merci ptit gars
-             <br> Je peux te donner que cela desole mais bientot j'aurais bien mieux !
-             <br> &Quest: Vous recevez 15 bouteilles d'exp"
+        completion: "<Roger> Merci ptit gars je peux te donner que cela
+             <br> desole mais bientot j'aurais bien mieux ! Repasse dans cinq minutes le temps de ranger.
+             <br> &Quest: Vous recevez 10 bouteilles d'exp"
     repeats: -1
     delay: 5
     objectives:
@@ -31,7 +31,7 @@
     rewards:
         '0':
             type: command
-            command: give <player> 384 15
+            command: give <player> 384 10
 #  IndianaJones temple (1)
 "Temple1":
     texts:
@@ -116,7 +116,7 @@
             <delay=40><g>Faites /quests status pour savoir ou vous en etes dans votre quete"
         completion: "<Julia>Merci c'est cela qu'il me fallait
             <br>Hum elle est pas super cet encre... Tiens voila un set d'aventurier
-            <&6Quest: Vous recevez une boussole, une carte et un cookie."
+            <br>&6Quest: Vous recevez une boussole, une carte et un cookie."
     repeats: 0
     objectives:
         '0':
@@ -138,4 +138,78 @@
         '2':
             type: item
             id: 357
+            amount: 1
+#  DarkCybrid mineur(4)
+"farm1":
+    texts:
+        description: "<Mineur> Salut mon gars, tu penses etre un mineur
+            <br> prouve le !
+            <br>&6Quest: <g>Mineur, Part 1
+            <br>&6Objective: Collecte 100 cobble et 25 bloc de fer"
+        acceptance: "<Mineur> Allez commece par cela
+            <delay=80>&6Quest: <g>Mineur, Part 1
+            <delay=40> <g> Faites /quests status pour savoir ou vous en etes dans voter quete"
+        completion: "Mouais bien joue
+        <br>&6Quest: Vous recevez une pioche en fer et cinq bouteilles dexp"
+    repeats: 0
+    objectives:
+        '0':
+            '0':
+                type: collect
+                amount: 100
+                materialid: 4
+                message: ""
+            '1':
+                type: collect
+                amount: 25
+                materialid: 15
+                message: ""
+    rewards:
+        '0':
+            type: item
+            id: 257
+            amount: 1
+        '1':
+           type: command
+           command: give <player> 384 5
+# Mireille (5)
+"Effortmetaux":
+    texts:
+        description: "<Mireille> Bonjour je m'appelle mireille
+            <br>une expedition en partance pour une terre lointaine et nous avons besoin de vous !
+            <br>&6Quest: <g>Effort de guerre precieux, Part 1
+            <br>&6Objectif: Rapporter les ressources qui vous sont demandees."
+        acceptance: "<Mireille> Ah la tu me fais plaisir ptit gars
+            <br>Alors il me faudrait 10 diamant et 20 barre d'or.
+            <delay=80>&6Quest: <g>Effort de guerre precieux, Part 1 &6start!
+            <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
+        completion: "<Mireille> Merci beaucoup
+             <br> Je ne peux te donner que cela desole, la prochaine fois peut etre ! Je range et je suis de nouveau a toi.
+             <br> &Quest: Vous recevez 10 bouteille d'exp, 1 larme de ghast et 500 geeks "
+    repeats: -1
+    delay: 5
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 264
+                amount: 10
+                npcdestination: 5
+                message: "&6Quest: Vous avez donne a Mireille  10 diamant."
+            '1':
+                type: delivery
+                materialid: 266
+                amount: 20
+                npcdestination: 5
+                message: "&6Quest: Vous avez donne a Mireille 20  barre d'or"
+    rewards:
+        '0':
+            type: command
+            command: give <player> 384 10
+        '1':
+            type: money
+            money: 500
+        '2':
+            type: item
+            id: 370
             amount: 1
