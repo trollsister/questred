@@ -102,6 +102,44 @@
             type: item
             id: 298
             amount: 1
+# jesusjoe demo2 (2)
+"demo2":
+    texts:
+        description: "<Jesus> Rebonjour mon enfant
+            <br>tu reviens participer a la croisade
+            <br>Nous devons vaincre !
+            <br>&6Quest: <g>Guerre sainte, Part 2
+            <br>&6Objective: Tuez 15 pig-zombies"
+        acceptance: "<Jesus> Allez par a present ton destin t'attend.
+            <delay=80>&6Quest: <g>Guerre sainte, Part 2
+            <delay=40> <g>Faites /quests status pour savoir ou vous en etes dans votre quete"
+        completion: "Le bien vaincra !
+            <br> et c'est grace  a vous! Tenez voici euh ... ceci !
+            <br>&6Quest: Vous recevez trois toile d'araignee et un torse en cuir"
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'demo1'
+    objectives:
+        '0':
+            '0':
+                type: hunt
+                amount: 15
+                string: PigZombie
+                message: "<Jesus> Ah le mal est repousse revenez aupres de moi"
+    rewards:
+        '0':
+            type: item
+            id: 30
+            amount: 3
+        '1':
+           type: money
+           amount: 10
+        '2':
+            type: item
+            id: 299
+            amount: 1
 #  Antiqua tresor(3)
 "antiq1":
     texts:
