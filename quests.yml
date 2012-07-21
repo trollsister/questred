@@ -6,22 +6,22 @@
             <br>&6Quest: <g>Effort de guerre, Part 1
             <br>&6Objectif: Rapporter les ressources qui vous sont demandees."
         acceptance: "<Roger> Ah la tu me fais plaisir ptit gars
-            <br>Alors il me faudrait 64 Stone et 64 bloc de verre.
+            <br>Alors il me faudrait 30 barre de fer et 64 bloc de verre.
             <delay=80>&6Quest: <g>Effort de guerre, Part 1 &6start!
             <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
         completion: "<Roger> Merci ptit gars je peux te donner que cela
              <br> desole mais bientot j'aurais bien mieux ! Repasse dans cinq minutes le temps de ranger.
-             <br> &Quest: Vous recevez 10 bouteilles d'exp"
+             <br> &Quest: Vous recevez 5 bouteilles d'exp"
     repeats: -1
     delay: 5
     objectives:
         '0':
             '0':
                 type: delivery
-                materialid: 1
-                amount: 64
+                materialid: 265
+                amount: 30
                 npcdestination: 0
-                message: "&6Quest: Vous avez donne a Roger  64 stone."
+                message: "&6Quest: Vous avez donne a Roger  30 barre de fer."
             '1':
                 type: delivery
                 materialid: 20
@@ -31,7 +31,8 @@
     rewards:
         '0':
             type: command
-            command: give <player> 384 10
+            command: give <player> 384 5
+            server: true
 #  IndianaJones temple (1)
 "Temple1":
     texts:
@@ -177,13 +178,49 @@
             type: item
             id: 357
             amount: 1
+#  Antiqua tresor(3)
+"antiq2":
+    texts:
+        description: "<Julia> bonjour bienvenue chez le nouvel antiquaire
+            <br>Il me faut des stocks supplementaire
+            <br> Pourriez vous me ramener deux trois petites choses
+            <br>&6Quest: <g> Avidite complaisante, Part 2
+            <br>&6Objective: Rapporter 10 baton de blaze a julia."
+        acceptance: "<Julia> Merci de me trouver ces batons vous serez bien recompenser.
+            <br>Je vous appellerais au moment voulu.
+            <delay=80>&6Quest: <g>Avidite complaisante, Part 2 &6start!
+            <delay=40><g>Faites /quests status pour savoir ou vous en etes dans votre quete"
+        completion: "<Julia>Merci c'est presque ce qu'il me falait
+            <br>&6Quest: Vous recevez un plastron en feret un briquet."
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'antiq1'
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 369
+                amount: 10
+                npcdestination: 3
+                message: "&6Quest: Vous avez donne a Julia 30 baton de blaze."
+    rewards:
+        '0':
+            type: item
+            id: 307
+            amount: 1
+        '1':
+           type: item
+           id: 259
+           amount: 1
 #  DarkCybrid mineur(4)
 "farm1":
     texts:
         description: "<Mineur> Salut mon gars, tu penses etre un mineur
             <br> prouve le !
             <br>&6Quest: <g>Mineur, Part 1
-            <br>&6Objective: Collecte 100 cobble et 25 bloc de fer"
+            <br>&6Objective: Collecte 100 cobble et 25 minerai de fer"
         acceptance: "<Mineur> Allez commece par cela
             <delay=80>&6Quest: <g>Mineur, Part 1
             <delay=40> <g> Faites /quests status pour savoir ou vous en etes dans voter quete"
@@ -210,6 +247,45 @@
         '1':
            type: command
            command: give <player> 384 5
+           server: true
+#  DarkCybrid mineur(4)
+"farm2":
+    texts:
+        description: "<Mineur> Salut mon gars, encore toi !
+            <br> prouve le !
+            <br>&6Quest: <g>Mineur, Part 2
+            <br>&6Objective: Collecte 50 gravier et 15 minerai d'or"
+        acceptance: "<Mineur> plus dur cette fois!
+            <delay=80>&6Quest: <g>Mineur, Part 2
+            <delay=40> <g> Faites /quests status pour savoir ou vous en etes dans voter quete"
+        completion: "De nouveau ....
+        <br>&6Quest: Vous recevez une pioche en or et cinq bouteilles dexp"
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'farm1'
+    objectives:
+        '0':
+            '0':
+                type: collect
+                amount: 100
+                materialid: 13
+                message: ""
+            '1':
+                type: collect
+                amount: 15
+                materialid: 14
+                message: ""
+    rewards:
+        '0':
+            type: item
+            id: 283
+            amount: 1
+        '1':
+           type: command
+           command: give <player> 384 5
+           server: true
 # Mireille (5)
 "Effortmetaux":
     texts:
@@ -244,6 +320,7 @@
         '0':
             type: command
             command: give <player> 384 10
+            server: true
         '1':
             type: money
             money: 500
@@ -251,3 +328,298 @@
             type: item
             id: 370
             amount: 1
+# Herobrine (6)
+"Hero1":
+    texts:
+        description: ""
+        acceptance: ""
+        completion: ""
+    repeats: 0
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 353
+                amount: 64
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '1':
+                type: delivery
+                materialid: 22
+                amount: 32
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '2':
+                type: collect
+                amount: 200
+                materialid: 13
+                message: "&6Quest: ..."
+            '3':
+                type: destroy block
+                amount: 500
+                materialid: 12
+                message: "&6Quest: ..."
+    rewards:
+        '0':
+            type: item
+            id: 329
+            amount: 1
+# Herobrine (6)
+"Hero2":
+    texts:
+        description: ""
+        acceptance: ""
+        completion: ""
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'Hero1'
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 111
+                amount: 64
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '1':
+                type: delivery
+                materialid: 344
+                amount: 32
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '2':
+                type: destroy block
+                amount: 250
+                materialid: 18
+                message: "&6Quest: ..."
+            '3':
+                type: delivery
+                materialid: 18
+                amount: 250
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '4':
+                type: hunt
+                amount: 100
+                string: PigZombie
+                message: "&6Quest: ..."
+    rewards:
+        '0':
+            type: command
+            command: give <player> 110 5
+            server: true
+        '1':
+            type: teleport
+            location:
+                x: -462
+                y: 108
+                z: 13727
+                world: 'world'
+# Herobrine (6)
+"Hero3":
+    texts:
+        description: ""
+        acceptance: "*enderman*"
+        completion: ""
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'Hero2'
+    objectives:
+        '0':
+            '0':
+                type: destroy block
+                amount: 32
+                materialid: 49
+                message: "&6Quest: ..."
+            '1':
+                type: collect
+                amount: 32
+                materialid: 49
+                message: "&6Quest: ..."
+            '2':
+                type: delivery
+                materialid: 49
+                amount: 32
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '3':
+                type: delivery
+                materialid: 45
+                amount: 64
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '4':
+                type: hunt
+                amount: 64
+                string: Enderman
+                message: "&6Quest: ..."
+            '5':
+                type: delivery
+                materialid: 289
+                amount: 64
+                npcdestination: 6
+                message: "&6Quest: ..."
+            '6':
+                type: collect
+                amount: 20
+                materialid: 48
+                message: "&6Quest: ..."
+            '7':
+                type: delivery
+                materialid: 48
+                amount: 20
+                npcdestination: 6
+                message: "&6Quest: ..."
+    rewards:
+        '0':
+            type: command
+            command: give <player> 121 10
+            server: true
+        '1':
+            type: teleport
+            location:
+                x: 3187
+                y: 89
+                z: -857
+                world: 'world'
+# Dora(7)
+"Explo1":
+    texts:
+        description: "<Dora> Hello je suis Dora
+            <br>J'aurais besoin de vous ! j'ai perdu ma carte... 
+            <br>&6Quest: <g>Dora l'exploratrice, Part 1
+            <br>&6Objectif: Ramener une carte a Dora."
+        acceptance: "<Dora> Very good !
+            <br>J'attends la carte avec impatience !
+            <delay=80>&6Quest: <g>Dora L'exploratrice, Part 1 &6start!
+            <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
+        completion: "<Dora> Merci beaucoup
+             <br> Maintenant on peut partir explorer le monde !
+             <br> &Quest: Vous recevez 1 boussole et une montre."
+    repeats: 0
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 358
+                amount: 1
+                npcdestination: 7
+                message: "&6Quest: Vous avez donne la carte a Dora"
+    rewards:
+        '0':
+            type: item
+            id: 347
+            amount: 1
+        '1':
+            type: item
+            id: 345
+            amount: 1
+# Dora(7)
+"Explo2":
+    texts:
+        description: "<Dora> A present partons a l'aventure
+            <br>&6Quest: <g>Dora l'exploratrice, Part 2
+            <br>&6Objectif: Parter avec Dora."
+        acceptance: "<Dora> Very good !
+            <br>Allez on part pour x1424 y77 z-2154!
+            <delay=80>&6Quest: <g>Dora L'exploratrice, Part 2 &6start!
+            <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
+        completion: "<Dora> Allo ? tu es chez babouche ... On doit le retrouver "
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'Explo1'
+    objectives:
+        '0':
+            '0':
+                type: move location
+                location:
+                    x: 1424
+                    y: 74
+                    z: -2154
+                    world: 'world'
+                time: 3
+                leeway: 8
+    rewards:
+        '0':
+            type: quest
+            quest: 'explo3'
+        '1':
+            type: teleport
+            location:
+                x: 1409
+                y: 70
+                z: -2157
+                world: 'world'
+# Dora(7)
+"Explo3":
+    texts:
+        description: "<Dora> Il faut trouver Babouche !
+            <br>&6Quest: <g>Dora l'exploratrice, Part 3
+            <br>&6Objectif: Parcourez la mine a la recherche de Babouche."
+        acceptance: "<Dora> Trouvez babouche dans sa mine !
+            <delay=80>&6Quest: <g>Dora L'exploratrice, Part 3 &6start!
+            <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
+        completion: "<Dora> Babouche est passe par le mondes citrouilles ? ohh il a du partir dans le Faerie land..."
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'Explo2'
+    objectives:
+        '0':
+            '0':
+                type: move location
+                location:
+                    x: 1409
+                    y: 45
+                    z: -2223
+                    world: 'world'
+                time: 1
+                leeway: 10
+    rewards:
+        '0':
+            type: item
+            id: 91
+            amount: 5
+        '1':
+            type: item
+            id: 354
+            amount: 2
+# Robert(8)
+"buche1":
+    texts:
+        description: "<Robert> Hello je suis le menuisier
+            <br>&6Quest: <g>Le bois c'est la vie, Part 1
+            <br>&6Objectif: Ramenez 64 buche a Robert."
+        acceptance: "<Dora> Merci grace a vous l'expedition avance ! !
+            <delay=80>&6Quest: <g>Le bois c'est la vie, Part 1 &6start!
+            <delay=40><g>Faites /quests status pour voir ou vous en etes dans la quete"
+        completion: "<Robert> Ah merci a vous le Dr_Madman pourra avoir son port !"
+    repeats: 0
+    requirements:
+        '0':
+            type: quest
+            quest: 'Effortressource'
+    objectives:
+        '0':
+            '0':
+                type: delivery
+                materialid: 17
+                amount: 64
+                npcdestination: 8
+                message: "&6Quest: Vous avez donne a Robert 64 bois."
+    rewards:
+        '0':
+            type: command
+            command: give <player> 384 2
+            server: true
+        '1':
+            type: item
+            id: 357
+            amount: 5
